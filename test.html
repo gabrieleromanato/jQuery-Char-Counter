@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery: contatore di caratteri Twitter in HTML5</title>
+<meta charset="utf-8" />
+<style type="text/css">
+body {
+	margin: 0 auto;
+	width: 40em;
+	font: 85% Arial, sans-serif;
+    padding: 2em 0;
+}
+
+h1 {
+    
+    margin: 0;
+    height: 3em;
+    background: #008eb9;
+    color: #fff;
+    position: relative;
+    border-radius: 6px;
+    line-height: 3;
+    text-align: center;
+    text-indent: 60px;
+    
+}
+ 
+h1 a {
+    
+    display: block;
+    width: 130px;
+    height: 24px;
+    text-indent: -1000em;
+    background: url(twitter.gif) no-repeat;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    
+}
+
+
+#content {
+	margin: 1em 0;
+	height: 150px;
+	border: 1px solid #666;
+	outline-style: none;
+	word-wrap: break-word;
+}
+
+#content:focus {
+	background: #eee;
+}
+
+#counter {
+	margin: 0.5em 0;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+#tweet a {
+	background: #008eb9;
+	color: #fff;
+	width: 130px;
+	height: 24px;
+	display: block;
+	margin: 0.5em auto;
+	font-weight: bold;
+	font-size: small;
+	border-radius: 6px;
+	line-height: 24px;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	border: 1px solid #009fca;
+}
+
+
+div.warning {
+	color: red;
+}
+</style>
+</head>
+
+<body>
+
+<h1><a href="http://www.twitter.com/">Twitter</a> What's happening?</h1>
+
+<div id="content" contenteditable="true"></div>
+<div id="counter"></div>
+<p id="tweet"><a href="#">Tweet</a></p>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.charcounter.js"></script>
+<script type="text/javascript">
+$(function() {
+
+	$('#content').charcounter();
+
+});
+</script>
+
+</body>
+</html>
